@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+  <meta charset="utf-8">
+  <title>Phone Gallery</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/services.js"></script>
+</head>
+<header>
+	<div class="page-header">
+		<ul>
+			<li><h1>Phone Gallery:
+				<small>Latest mobiles are here</small></h1></li>
+			<li><input type="search" placeholder="search mobile here"></li>
+			<li><input type="submit"></li>
+			<li><select>
+					<option value="cart" selected><span class="glyphicon glyphicon-shopping-cart" aria-hidden="false"></span>Cart</option>
+				</select>
+		<ul>
+	</div>
+	<nav class="navbar navbar-inverse">
+		<div class="container">
+		<ul>
+			<li><a href="#/phones">Home</a></li>
+			<li><a href="#/phones">Checkout</a></li>
+			<li>Register</li>
+			<li>LogIn</li>
+			<li>About Us</li>
+		</ul>
+		</div>
+	</nav>
+</header>
+<body>
+  <div class="view-container">
+    <div ng-view class="view-frame"></div>
+  </div>
+  <div class="footer" >
+	<footer><ul>
+				<li>About Us</li>
+				<li>Register</li>
+				<li>LogIn</li>
+			</ul>
+	</footer>
+	</div>
+</body>
+
+</html>
