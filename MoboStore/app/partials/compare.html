@@ -1,0 +1,45 @@
+
+
+
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-md-2">
+  	
+	<button class="btn btn-secondary" ng-click="clear()">Clear List</button>
+  </div>
+    <div class="col-md-10">
+    	<div class="col-sm-6 col-md-4 grid-item">
+			<div ng-repeat="phone in CompareList">
+				
+				
+				<div class="col-sm-6 col-md-4 grid-item">
+			    	<div class="thumbnail">
+			            <a href="#/phones/{{phone.id}}">
+			    			<img ng-src="{{phone.imageUrl}}" />
+			            </a>
+			    			<div class="caption">
+			        				  <a href="#/phones/{{phone.id}}"><h3>{{phone.name}}</h3></a>
+			        				  <p>{{phone.snippet}}</p>
+			        				  <p><button class="btn btn-primary" ng-click="remove(phone)">Remove from compare list</button> 
+			    			</div>
+			    	</div>
+			    </div>
+			
+			</div>
+			<!-- ng-class directive applies hidden class if phoneCart is empty and hides the empty cart message-->
+			<div ng-class="{hidden: CompareList.length}" class="jumbotron">
+				<h2>Cart is empty.</h2>
+				<p> Add phone to cart by visiting phone list.</p>
+				<a href="#/phones" class="btn btn-primary">Phone List</a>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+<script type="text/javascript">
+  $('.grid').masonry({
+    // options
+    itemSelector: '.grid-item',
+    columnWidth: 400
+  });
+</script>
